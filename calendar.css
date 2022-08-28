@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("MavenPro.woff2") format('woff2');
+}
+  
+::selection {
+    background-color: #4285f4;
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background-color: #4285f4;
+    color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Maven Pro';
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url('https://source.unsplash.com/400x400') no-repeat fixed center;
+    background-size: cover;
+    backdrop-filter: blur(6px);
+}
+
+.calendar {
+    position: relative;
+    width: 400px;       
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.header {   
+    position: relative;
+    height: 270px;
+    background-image: url('https://source.unsplash.com/400x400');
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.week-days li {
+    position: relative;
+    float: left;
+    display: block;
+    padding: 10px;
+    font-size: 11px;
+}
+
+.week-days {
+    margin: 0;
+    padding: 1px 0;
+    background-color: #e0e5ec;
+}
+
+.days li {
+    display: inline-block;
+    padding: 10px;
+    width: 12.5%;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.days ul.last {
+    width: 20%;
+    display: inline;
+    padding-right: 175px;
+}
+
+.days {
+    position: relative;
+    margin: 0;
+    padding: 1px 0;
+    background-color: #eee;
+}
+
+li.active {
+    background-color: #4285f4;
+    color: white;
+}
+
+.footer {
+    padding: 15px;
+}
+
+.calendar:hover .container {
+    display: block;
+}
